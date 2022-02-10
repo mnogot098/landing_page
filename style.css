@@ -1,0 +1,142 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    color: blueviolet;
+    position: fixed;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+header h1{
+    padding-left: 20px;
+    text-transform: uppercase;
+    font-size: 1.7em;
+    letter-spacing: 1px;
+}
+.menu{
+    display: flex;
+}
+.menu button{
+    display: none;
+}
+.menu .menu-list{
+    list-style: none;
+    display: flex;
+}
+.menu .menu-list li{
+    display: inline-block;
+    margin-left: 32px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.menu-list li.active,.menu-list li:hover{
+    color: salmon;
+}
+.main{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.main .right img{
+    width: 100%;
+}
+.main .left {
+    max-width: 40%;
+    padding: 100px 64px;
+}
+.main .left .title{
+    color:rgb(252, 90, 72);
+    font-size: 3.2em;
+    width: 50%;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 48px;
+}
+.msg{
+    color: rgb(104, 106, 107);
+    font-size: 1.1em;
+    letter-spacing: 0.7px;
+    line-height: 30px;
+    margin-bottom: 48px;
+}
+.cta{
+    border: none;
+    outline: none;
+    background-color: blueviolet;
+    color: #fff;
+    padding: 18px 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    box-shadow: 0px 20px 35px rgb(212, 209, 209);
+    cursor: pointer;
+}
+
+@media(max-width:800px){
+    .header,
+    .left,
+    .right{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media(max-width:650px){
+    .main{
+        flex-direction: column;
+    }
+    .left,
+    .right{
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left{
+        font-size: 0.8em;
+    }
+
+    .right img{
+        width:80%;
+    }
+    .menu button{
+        display: block;
+    }
+    .menu-list{
+        position:fixed;
+        top:0;
+        right: 0;
+        width: 80%;
+        height: 100%;
+        background-color: blueviolet;
+        color:#fff;
+        padding: 46px;
+        flex-direction: column;
+        padding-top: 80px;
+        transform: translateX(100%);
+        transition: transform 0.5s;
+    }
+    .menu-list li {
+        font-size: 1.7em;
+        margin:25px 0px;
+    }
+}
